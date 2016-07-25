@@ -1,0 +1,7 @@
+S src/image
+B _build/src/image
+
+S bin
+B _build/bin
+PKG core
+FLG -w +a-4-40..42-44-45-48

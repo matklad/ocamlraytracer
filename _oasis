@@ -1,0 +1,20 @@
+OASISFormat: 0.4
+Name:        ocamlraytracer
+Version:     0.1
+Synopsis:    Ray tracer in OCaml
+Authors:     Aleksey Kladov
+License:     MIT
+BuildDepends: core, threads
+
+Executable ocamlraytracer
+  Path:       bin
+  BuildTools: ocamlbuild
+  MainIs:     main.ml
+  CompiledObject: native
+  BuildDepends: image
+
+Library image
+  Path:       src/image
+  BuildTools: ocamlbuild
+  Modules:    Image
+  BuildDepends: core
