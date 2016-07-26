@@ -1,3 +1,5 @@
+open Core_kernel.Std
+
 type color = {
   r: int;
   g: int;
@@ -14,7 +16,7 @@ type t = {
 let create width height gen = {
   width;
   height;
-  data = Array.init (width * height) (fun (idx) ->
+  data = Array.init (width * height) ~f:(fun (idx) ->
       let w = idx / width in
       let h = idx mod width in
       gen (w, h))
@@ -23,4 +25,4 @@ let create width height gen = {
 let width x = x.width
 let height x = x.height
 
-let pixel_at t x y = Array.get t.data (x * t.heightt + y)
+let pixel_at t x y = t.data.(x * t.height + y)

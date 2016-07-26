@@ -4,7 +4,7 @@ Version:     0.1
 Synopsis:    Ray tracer in OCaml
 Authors:     Aleksey Kladov
 License:     MIT
-BuildDepends: core, threads
+BuildDepends: core_kernel, threads
 
 Executable ocamlraytracer
   Path:       bin
