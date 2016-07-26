@@ -14,3 +14,5 @@ val width : t -> int
 val height : t -> int
 
 val pixel_at : t -> int -> int -> color
+
+val to_ppm : t -> string
