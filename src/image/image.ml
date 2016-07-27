@@ -16,7 +16,7 @@ type t = {
 let create width height gen = {
   width;
   height;
-  data = Array.init (width * height) ~f:(fun (idx) ->
+  data = Array.init (width * height) ~f:(fun idx ->
       let w = idx / width in
       let h = idx mod width in
       gen (w, h))
