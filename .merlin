@@ -1,7 +1,11 @@
 S src/image
 B _build/src/image
 
+S src/geom
+B _build/src/geom
+
 S bin
 B _build/bin
+
 PKG core_kernel
 FLG -w +a-4-40..42-44-45-48

@@ -11,10 +11,16 @@ Executable ocamlraytracer
   BuildTools: ocamlbuild
   MainIs:     main.ml
   CompiledObject: native
-  BuildDepends: image
+  BuildDepends: image, geom
 
 Library image
   Path:       src/image
   BuildTools: ocamlbuild
   Modules:    Image
-  BuildDepends: core
+  BuildDepends: core_kernel
+
+Library geom
+  Path:       src/geom
+  BuildTools: ocamlbuild
+  Modules:    Geom
+  BuildDepends: core_kernel
